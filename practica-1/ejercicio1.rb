@@ -1,5 +1,14 @@
 # Ejercicio 1
 
+# 1. Investigá y probá enunintérprete deRuby(irb,porejemplo)cómocrearobjetosdelossigu
+# ientes tipos básicos, tanto mediante el uso de literales como utilizando el constructor new
+# (cuando seaposible):
+# • Symbol
+# • String
+# • Array
+# • Hash
+
+
 # Symbol
 # Los símbolos son identificadores livianos e inmutables que se suelen usar como nombres de claves o etiquetas.
 
@@ -103,8 +112,5 @@ irb(main):006:0> contador[:manzanas]
 # Al consultar una clave que no existe, devuelve el valor por defecto configurado (0) en lugar de nil
 irb(main):007:0> contador[:peras]
 => 0º
-
-# Ejercicio 2
-# 2. ¿De qué forma(s) se puede convertir un objeto(cualquiera fuere su tipo o clase) en String?
 
 
