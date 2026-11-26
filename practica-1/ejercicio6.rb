@@ -6,16 +6,16 @@
 #minutos = tiempo.min
 
 def tiempo_en_palabras(tiempo)
-  hora = tiempo.hour
   hora = case tiempo.min
-            when (35..44) then tiempo.hour
-            when (45.59) then tiempo.hour + 1
-          end 
+            when (0..34) then tiempo.hour
+            when (35..44) then tiempo.hour + 1
+            when (45..59) then tiempo.hour + 1
 
+          end 
 
   prefijo = case tiempo.min
             when (0..55) then  tiempo.hour == 1 ? "Es la" : "Son las"
-            when (56.59) then (tiempo.hour + 1) % 24 == 1 ? "Casi es la" : "Casi son las"
+            when (56..59) then (tiempo.hour + 1) % 24 == 1 ? "Casi es la" : "Casi son las"
           end
 
   sufijo = case tiempo.min  
@@ -40,3 +40,5 @@ tiempo_en_palabras(Time.new(2025, 10, 21, 6, 58))
 # => "Casi son las 7"
 tiempo_en_palabras(Time.new(2025, 10, 21, 0, 58))
  # => "Casi es las 1"
+ 
+tiempo_en_palabras(Time.new(2025, 10, 21, 10, 36))
