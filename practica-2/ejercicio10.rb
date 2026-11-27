@@ -49,8 +49,7 @@ module Countable
   end
 end
 class Greeter
- include Countable
-
+ include Countable| 
  def hi
   puts'Hey!'
  end
